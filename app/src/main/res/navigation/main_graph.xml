@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/movies">
+    <fragment
+        android:id="@+id/movies"
+        android:name="com.msit.tmdb.features.movies.presentation.movies.MoviesFragment"
+        tools:layout="@layout/movies_fragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tvShows"
+        android:name="com.msit.tmdb.features.tvShows.TvShowsFragment"
+        tools:layout="@layout/tv_shows_fragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/people"
+        android:name="com.msit.tmdb.features.people.presentation.people.PeopleFragment"
+        tools:layout="@layout/people_fragment">
+
+    </fragment>
+
+</navigation>
