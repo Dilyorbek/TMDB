@@ -4,8 +4,8 @@
     <data>
 
         <variable
-            name="movie"
-            type="com.msit.tmdb.features.numberTrivia.domain.entity.Movie" />
+            name="item"
+            type="com.msit.tmdb.features.movies.data.local.entity.Movie" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,6 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:transitionName="photo"
+            url="@{item.getPosterUrl()}"
+            placeholder="@drawable/ic_menu_movies"
             app:layout_constraintDimensionRatio="2:3"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />

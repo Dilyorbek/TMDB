@@ -1,7 +1,6 @@
 package com.msit.tmdb.features.movies.presentation.movies
 
-import androidx.paging.PagedList
-import com.msit.tmdb.features.numberTrivia.domain.entity.Movie
+import com.msit.tmdb.features.movies.data.local.entity.Movie
 
 
 sealed class MoviesUiState {

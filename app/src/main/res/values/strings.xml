@@ -3,4 +3,6 @@
     <string name="ic_action_movies">Movies</string>
     <string name="ic_action_tv_shows">TV Shows</string>
     <string name="ic_action_people">People</string>
+
+    <string name="action_retry">Retry</string>
 </resources>
