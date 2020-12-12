@@ -10,6 +10,7 @@
         <item name="colorSurface">@color/blue</item>
         <item name="colorOnSurface">@color/white</item>
         <item name="colorAccent">@color/light_blue</item>
+        <item name="colorOnPrimarySurface">@color/white</item>
         <item name="android:windowBackground">@color/dark_blue</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
@@ -21,4 +22,15 @@
     <style name="TMDB_BOTTOM_MENU_STYLE">
         <item name="iconTint">@color/bottom_tint</item>
     </style>
+
+<!--    <style name="Theme.AppBarOverlay" parent="Theme.MaterialComponents.Light.DarkActionBar">-->
+<!--        <item name="android:textColorPrimary">TITLE_COLOR_GOES_HERE</item>-->
+<!--        <item name="android:textColorSecondary">SUBTITLE_COLOR_GOES_HERE</item>-->
+<!--    </style>-->
+<!--    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">-->
+<!--        <item name="android:textColorPrimary">TITLE_COLOR_GOES_HERE</item>-->
+<!--        <item name="android:textColorSecondary">SUBTITLE_COLOR_GOES_HERE</item>-->
+<!--    </style>-->
+
+<!--    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
 </resources>

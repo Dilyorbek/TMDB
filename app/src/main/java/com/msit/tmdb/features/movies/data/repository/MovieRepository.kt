@@ -23,11 +23,8 @@ class MovieRepository(
     fun getMovies(): Flow<PagingData<Movie>> {
         return Pager(
             PagingConfig(pageSize = NETWORK_PAGE_SIZE, enablePlaceholders = false),
-            remoteMediator = MovieRemoteMediator(
-                service,
-                database
-            ),
-            pagingSourceFactory = { database.movieDao().getAll() }
+
+            pagingSourceFactory = { MoviePagingSource(service) }
         ).flow
     }
 }

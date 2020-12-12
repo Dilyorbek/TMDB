@@ -1,45 +1,19 @@
-package com.msit.tmdb
+package com.msit.tmdb.core.module
 
-import android.app.Application
 import android.util.Log
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.msit.tmdb.core.util.Constants
-import com.msit.tmdb.core.data.local.AppDatabase
+import com.msit.tmdb.BuildConfig
 import com.msit.tmdb.core.data.remote.AuthInterceptor
+import com.msit.tmdb.core.util.Constants
 import com.msit.tmdb.features.movies.data.remote.service.MovieService
-import com.msit.tmdb.features.movies.data.repository.MovieRepository
-import com.msit.tmdb.features.movies.presentation.movies.MoviesViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-
-val viewModelModule = module {
-    viewModel { MoviesViewModel(get()) }
-}
-
-val repositoryModule = module {
-    single { MovieRepository(get(), get()) }
-}
-
-val databaseModule = module {
-
-    fun provideDatabase(application: Application) = AppDatabase.create(application)
-
-    fun provideMovieDao(database: AppDatabase) = database.movieDao()
-
-    fun provideMovieKeysDao(database: AppDatabase) = database.movieKeysDao()
-
-    single { provideDatabase(get()) }
-    single { provideMovieDao(get()) }
-    single { provideMovieKeysDao(get()) }
-}
-
 
 val networkModule = module {
     factory { get<Retrofit>().create(MovieService::class.java) }
@@ -84,5 +58,3 @@ val networkModule = module {
     single { provideHttpClient(get(), get()) }
     single { provideRetrofit(get(), get()) }
 }
-
-val appModules = listOf(networkModule, databaseModule, repositoryModule, viewModelModule)

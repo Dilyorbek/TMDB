@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context="com.msit.tmdb.MainActivity">
+        tools:context="com.msit.tmdb.features.MainActivity">
+
 
         <fragment
             android:id="@+id/nav_host_fragment"
@@ -16,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:defaultNavHost="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:navGraph="@navigation/main_graph" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView

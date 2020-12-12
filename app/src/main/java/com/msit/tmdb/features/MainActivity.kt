@@ -1,12 +1,11 @@
-package com.msit.tmdb
+package com.msit.tmdb.features
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.findNavController
-import androidx.navigation.ui.navigateUp
+import com.msit.tmdb.R
 import com.msit.tmdb.databinding.MainActivityBinding
 
 
@@ -21,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         initUi()
     }

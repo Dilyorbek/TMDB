@@ -16,7 +16,7 @@
         android:theme="@style/Theme.TMDB">
         <activity
             android:screenOrientation="fullSensor"
-            android:name="com.msit.tmdb.MainActivity">
+            android:name="com.msit.tmdb.features.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

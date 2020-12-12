@@ -6,13 +6,11 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.msit.tmdb.core.util.Constants
 import com.msit.tmdb.features.movies.data.local.dao.MovieDao
-import com.msit.tmdb.features.movies.data.local.dao.MovieKeysDao
-import com.msit.tmdb.features.movies.data.local.entity.MovieKeys
 import com.msit.tmdb.features.movies.data.local.entity.Movie
 
 @Database(
-    entities = [Movie::class, MovieKeys::class],
-    version = 2,
+    entities = [Movie::class],
+    version = 1,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -24,5 +22,4 @@ abstract class AppDatabase : RoomDatabase() {
     }
 
     abstract fun movieDao(): MovieDao
-    abstract fun movieKeysDao(): MovieKeysDao
 }

@@ -8,7 +8,7 @@
             type="com.msit.tmdb.features.movies.presentation.movies.MoviesViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -17,15 +17,17 @@
         android:layout_height="match_parent"
         tools:context=".features.movies.presentation.movies.MoviesFragment">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/movies"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
-                app:spanCount="@integer/movie_span_count"
-                app:fastScrollEnabled="false"
-                tools:itemCount="12"
-                tools:listitem="@layout/movie_item" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/movies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fastScrollEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:spanCount="@integer/movie_span_count"
+            tools:itemCount="12"
+            tools:listitem="@layout/movie_item" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
